@@ -1,0 +1,37 @@
+#:kivy 2.0.0
+<MyGridLayout>
+
+    name:name
+    pizza:pizza
+    color:color
+
+    GridLayout:
+        cols:1
+        size : root.width, root.height
+    
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "name"
+            TextInput:
+                id:name
+                multiline: False
+        
+            Label:
+                text: "favorite pizza"
+            TextInput:
+                id: pizza
+                multiline: False
+
+            Label:
+                text: "favorite color"
+            TextInput:
+                id: color
+                multiline: False
+
+        Button:
+            text: "Submit"
+            font: 32
+            on_press : root.press()
+
